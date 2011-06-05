@@ -3,7 +3,8 @@ Gmail Message Length Checker
 
 A Safari extension for Gmail that displays how long your email will take to read as you type it. [Download the extension](https://github.com/downloads/neilgupta/Gmail-Message-Length-Checker/gmailmessagelengthchecker.safariextz).
 
-![Screenshot](https://github.com/neilgupta/Gmail-Message-Length-Checker/blob/master/screenshot.png)
+!(https://github.com/neilgupta/Gmail-Message-Length-Checker/blob/master/screenshot.png)
+
 *Screenshot of email length display in Gmail*
 
 The extension calculates reading time based on the word count of your email divided by the average reading speed of 250 words per minute. [Read more about calculating reading time](http://www.leancrew.com/all-this/2011/06/reading-time-in-textmate/). If your email will take more than 30 seconds to read, the time is highlighted in red to remind you to try shortening the email.
