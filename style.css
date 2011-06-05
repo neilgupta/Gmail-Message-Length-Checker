@@ -1,0 +1,11 @@
+span#metamorphium-lengthnotice {
+	padding-right: 10px;
+}
+
+span#metamorphium-time {
+	font-weight: bold;
+}
+
+span.metamorphium-warning {
+	color: red;
+}
