@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script type="text/javascript">
+	safari.application.addEventListener("message",respondToMessage,false);
+	function respondToMessage(event) {
+		if (event.name === "settings")
+			event.target.page.dispatchMessage("settingsAre",
+				{doWarning: safari.extension.settings.doWarning,
+				 maxSeconds: safari.extension.settings.maxSeconds});
+	}
+	safari.extension.settings.addEventListener("change", settingChanged, false);
+	function settingChanged(event) {
+		safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("settingsAre", 
+				{doWarning: safari.extension.settings.doWarning,
+		 		maxSeconds: safari.extension.settings.maxSeconds});        
+	}
+  </script>
+</head>
+<body></body>
+</html>

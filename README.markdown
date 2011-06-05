@@ -7,7 +7,7 @@ A Safari extension for Gmail that displays how long your email will take to read
 
 *Screenshot of email length display in Gmail*
 
-The extension calculates reading time based on the word count of your email divided by the average reading speed of 250 words per minute. [Read more about calculating reading time](http://www.leancrew.com/all-this/2011/06/reading-time-in-textmate/). The average email read time is 15-20 seconds. If your email will take more than 30 seconds to read, the time is highlighted in red to remind you to try shortening the email to increase your chances of it getting read.
+The extension calculates reading time based on the word count of your email divided by the average reading speed of 250 words per minute. [Read more about calculating reading time](http://www.leancrew.com/all-this/2011/06/reading-time-in-textmate/). You can even set the extension to highlight the reading time in red if it exceeds a given amount of time. Keep in mind that the average amount of time spent on an email is 15-20 seconds!
 
 MIT License
 Copyright (c) 2011 Neil Gupta

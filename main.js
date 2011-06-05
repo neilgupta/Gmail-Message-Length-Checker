@@ -1,5 +1,5 @@
 /*
- * Gmail Message Length Checker
+ * Gmail Message Length Checker 1.1
  * (c) Neil Gupta 2011
  * https://github.com/neilgupta/Gmail-Message-Length-Checker/
  *
@@ -19,20 +19,30 @@ $("textarea[name='body']").live("keyup blur",function() {
 	
 	if ($time.length === 0)
 		// add our notice element to the DOM, right next to the "Check Spelling" button in Gmail
-		$time = $("<span id='metamorphium-lengthnotice'>Email will take <span id='metamorphium-time'></span> to read.</span>")
+		$time = $("<span id='metamorphium-lengthnotice'>Reading time: <span id='metamorphium-time'></span></span>")
 					.prependTo($container).find("span#metamorphium-time");
 
 	// update text
 	$time.text(min+":"+sec);
 
-	// show red warning if email will take more than 30 seconds to read
-	if (min > 0 || (wc % 250)/250 > 0.5)
+	// show red warning if email will take more than maxSeconds to read
+	var maxTime = settings.maxSeconds / 60;
+	if (settings.doWarning && min >= Math.floor(maxTime) && (wc % 250)/250 > (maxTime % 1))
 		$time.addClass("metamorphium-warning");
 	else
 		$time.removeClass("metamorphium-warning");
 });
 
 var pad = function (val, pad, size) { while (val.length < size) val = pad + val; return val; };
+
+// convoluted method for getting Safari settings
+var settings;
+safari.self.tab.dispatchMessage("settings"); // ask for value
+safari.self.addEventListener("message", getMessage, false); // wait for reply
+function getMessage(event) {
+    if (event.name === "settingsAre")
+		settings = event.message;
+}
 
 // Commented out because I could not figure out how to prevent Gmail from sending the email 
 // after send button had been pushed.
