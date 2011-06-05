@@ -3,7 +3,7 @@ Gmail Message Length Checker
 
 A Safari extension for Gmail that displays how long your email will take to read as you type it. [Download the extension](https://github.com/downloads/neilgupta/Gmail-Message-Length-Checker/gmailmessagelengthchecker.safariextz).
 
-<img src="https://github.com/neilgupta/Gmail-Message-Length-Checker/raw/master/screenshot.png" width="267" height="107" alt="Screenshot" />
+![Screenshot](https://github.com/neilgupta/Gmail-Message-Length-Checker/raw/master/screenshot.png)
 
 *Screenshot of email length display in Gmail*
 
